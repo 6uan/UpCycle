@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar { /* Remove scrollbar space */
+  width: 0;
+  background: transparent;
+}
+
+.container { /* SNAP SCROLLING */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+body {
+  background-color: #F5F5F5; 
+  margin-top: 10px;
+}
+
+
+/* STYLES FOR SECTION 1*/
+
+.first {
+  background-color: #F5F5F5;
+}
+
+.outer-container-sec1 {
+  width: 95%;
+  height: 95%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-width: 300px;
+}
+
+/* Boilerplate should be basic alignmnet */
+
+.inner-container-sec1 {
+  background: rgba(0, 0, 0, .15);
+  border-radius: 10px;
+  min-width: 100px;
+  margin: 5px 5px 40px 4px;
+  overflow: hidden;
+  color: #333;
+}
+
+/* For the quote container */
+.inner-container-sec1#quote {
+  background: none;
+  min-height:200px;
+  position: relative; 
+  padding: 20px; /* Add some padding */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center text horizontally */
+}
+
+.inner-container-sec1#img {
+  background: none;
+  min-height:400px;
+  position: relative; 
+}
+
+
+/* For the quote text */
+.inner-container-sec1#quote h1 {
+  font-size: 4em; /* Responsive font size */
+  margin: 0 0 10px 0; /* Add some space below the quote */
+}
+
+/* For the author text */
+.inner-container-sec1#quote p {
+  margin: 0; /* Remove default margin */
+  align-self: flex-end; /* Align to the right */
+  font-size: 1em; /* Responsive font size */
+}
+
+/* Responsive font sizes */
+@media (max-width: 800px) {
+  .inner-container-sec1#quote h1 {
+    font-size: 2em; /* Smaller font size on medium screens */
+  }
+  .inner-container-sec1#quote p {
+    font-size: 0.8em; /* Smaller font size on medium screens */
+  }
+}
+
+
+.text-align { /* Flexbox for text elements*/
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.boldest {
+  font-size: 60px;
+}
+
+.bold {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+@media (max-width: 700px) {
+  .outer-container-sec1 {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+@media (max-width: 700px) {
+  .inner-container-sec1 {
+    height: 300px;
+  }
+  
+.image-container{
+    min-height: 660px;
+  }
+}
+
+
+.bottom-right-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.button-container {
+    height: 10%;
+  padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-style {
+  border-radius: 3px;
+  font-weight: bolder;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  border: 1px solid darkgrey;
+}
+
+
+.link-style {
+ min-width: 200px;
+ display:flex;
+ flex-direction: column;
+ gap: 10px;
+ font-size: 1em;
+}
+
+.link-style a{
+  text-decoration: none;
+  font-family:'Ubuntu', sans-serif;
+  color: white;
+}
+
+.link-style :hover{
+  cursor: pointer;
+  color: lightblue;
+}
+
+
+/* STYLE FOR SECTION 2 */
+
+.outer-container-sec2 {
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow-x: hidden;
+}
+
+@media (max-width: 700px) {
+  .outer-container-sec2 {
+  }
+}
+
+.text-padding{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+.inner-container-sec2 {
+  background: rgba(0, 0, 0, .15);
+  min-width: 100px;
+  height: 20%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  overflow:scroll;
+  color: #ffffff;
+}
+
+.box-align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-sec2{
+  height: 98%;
+  width: 20%;
+}
+
+.img-box {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.second {
+  background-color: #F5F5F5;
+}
+
+/* STYLE FOR SECTION 3 */
+
+.outer-container-sec3 {
+  
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.inner-container-sec3 {
+  background: rgba(0, 0, 0, .15);
+  min-width: 100px;
+  height: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  overflow:hidden;
+  color: #ffffff;
+}
+
+.inner-container-sec3-title {
+  background: rgba(0, 0, 0, .15);
+  min-width: 100px;
+  height: 10%;
+  margin: 10px;
+  overflow:hidden;
+  color: #ffffff;
+}
+
+.inner-container-sec3-button {
+  background: rgba(0, 0, 0, .15);
+  min-width: 100px;
+  height: 5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  overflow:hidden;
+  color: #ffffff;
+}
+
+.inner-container-sec3-grid {
+  background: rgba(0, 0, 0, 0.15);
+  min-width: 100px;
+  height: 90%;
+  margin: 20px;
+  overflow:hidden;
+  color: #ffffff;
+}
+
+.grid-container {
+    display: grid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    grid-template-columns: repeat(2, 1fr); /* 5 columns */
+    grid-template-rows: repeat(5, 1fr); /* 2 rows */
+    gap: 5px; /* space between grid items */
+}
+
+@media (max-width: 700px) {
+
+  
+  .grid-container {
+      display: grid;
+      padding-top: 70px;
+      padding-bottom: 5px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 5px; /* space between grid items */
+  }
+
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 100%;
+}
+
+.video-thumbnail {
+    height: 188px;
+    width: 366px;
+}
+
+.video-title {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.video-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.third {
+  background-color: #F5F5F5;
+}
+
+.fourth {
+  background-color: #F5F5F5;
+}
+
+.fifth {
+  background-color: #F5F5F5;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px
+}
+.error {
+  border: 2px solid red;
+  background-color: pink;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  overflow-x: hidden;
+}
+
+section#sec-3 { /* added flex-direction to sec 3 onl */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  overflow-x: hidden;
+}
+
+.border {
+  border: deeppink solid 2px;
+}
+
+#hamburger-menu {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: block;
+  z-index: 100;
+}
+
+#hamburger-menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #333;
+  border-radius: 3px;
+  z-index: 3;
+}

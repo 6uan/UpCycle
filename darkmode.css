@@ -1,0 +1,45 @@
+
+/* Dark mode styles */
+
+.darkmode {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 60px;
+  display: block;
+  z-index: 100;
+}
+
+.dark-mode {
+  color: #ffffff; /* Light text */
+}
+
+.dark-mode a {
+  color: #9A9A9A; /* Lighter text for links */
+}
+
+.dark-mode .inner-container-sec1,
+.dark-mode .text-container,
+.dark-mode .inner-container-sec2,
+.dark-mode .inner-container-sec3,
+.dark-mode .inner-container-sec3-title,
+.dark-mode .inner-container-sec3-button,
+.dark-mode .inner-container-sec3-grid {
+  background: rgba(100, 100, 123, 40);
+}
+
+.dark-mode .sidenav {
+  background-color: #2C2C2C; /* Darker side nav */
+}
+
+.dark-mode .hamburger span {
+  background-color: #CCCCCC !important;
+}
+
+.dark-mode .inner-container-sec1 .a {
+  color: #CCCCCC;
+}
+
+.dark-mode .sidenav a {
+  color: #CCCCCC; /* Light text for side nav links */
+}
