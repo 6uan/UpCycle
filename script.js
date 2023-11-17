@@ -2,34 +2,89 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   let isDarkMode = false; // Initially, dark mode is off
+  let isMotion = true; // Initially, site has motion
 
-  // Select the dark mode button and icons
-  const toggleButton = document.getElementById('myButton');
+  // Select the dark mode button, motion, and icons
+  const toggleDarkmodeButton = document.getElementById('darkmodeButton');
+  const toggleMotionButton = document.getElementById('motionButton');
   const moonIcon = document.getElementById('moonIcon');
   const sunIcon = document.getElementById('sunIcon');
 
   const lightImg = document.getElementById('light_img');
   const darkImg = document.getElementById('dark_img');
 
-  // Function to toggle icons
-  function toggleIcons() {
-    if(isDarkMode) {
-      moonIcon.style.display = 'none';
-      lightImg.style.display = 'none';
-      darkImg.style.display = 'inline-block';
-      sunIcon.style.display = 'inline-block';
-    } else {
-      moonIcon.style.display = 'inline-block';
-      lightImg.style.display = 'inline-block';
-      darkImg.style.display = 'none';
-      sunIcon.style.display = 'none';
-    }
-  }
 
-  // Event listener for the button click
-  toggleButton.addEventListener('click', () => {
+  const onIconDark = document.getElementById('onIconDark');
+  const onIconLight = document.getElementById('onIconLight');
+  const offIconDark = document.getElementById('offIconDark');
+  const offIconLight = document.getElementById('offIconLight');  
+  
+ function toggleIcons() {
+  // Light mode, motion on
+  if (!isDarkMode && isMotion) {
+    moonIcon.style.display = 'inline-block';
+    sunIcon.style.display = 'none';
+    lightImg.style.display = 'inline-block';
+    darkImg.style.display = 'none';
+    onIconDark.style.display = 'inline-block';
+    onIconLight.style.display = 'none';
+    offIconDark.style.display = 'none';
+    offIconLight.style.display = 'none';
+  } 
+  // Light mode, motion off
+  else if (!isDarkMode && !isMotion) {
+    moonIcon.style.display = 'inline-block';
+    sunIcon.style.display = 'none';
+    lightImg.style.display = 'inline-block';
+    darkImg.style.display = 'none';
+    onIconDark.style.display = 'none';
+    onIconLight.style.display = 'none';
+    offIconDark.style.display = 'inline-block';
+    offIconLight.style.display = 'none';
+  } 
+  // Dark mode, motion on
+  else if (isDarkMode && isMotion) {
+    moonIcon.style.display = 'none';
+    sunIcon.style.display = 'inline-block';
+    lightImg.style.display = 'none';
+    darkImg.style.display = 'inline-block';
+    onIconDark.style.display = 'none';
+    onIconLight.style.display = 'inline-block';
+    offIconDark.style.display = 'none';
+    offIconLight.style.display = 'none';
+  } 
+  // Dark mode, motion off
+  else if (isDarkMode && !isMotion) {
+    moonIcon.style.display = 'none';
+    sunIcon.style.display = 'inline-block';
+    lightImg.style.display = 'none';
+    darkImg.style.display = 'inline-block';
+    onIconDark.style.display = 'none';
+    onIconLight.style.display = 'none';
+    offIconDark.style.display = 'none';
+    offIconLight.style.display = 'inline-block';
+  }
+}
+
+  // Event listener for the darkmode click
+  toggleDarkmodeButton.addEventListener('click', () => {
     isDarkMode = !isDarkMode; // Toggle the state of isDarkMode
     document.body.classList.toggle('dark-mode'); // Toggle the .dark-mode class
+    toggleIcons(); // Call the function to toggle icons
+  });
+
+
+  // Event listener for motion
+  toggleMotionButton.addEventListener('click', () => {
+    isMotion = !isMotion; // Toggle the state of isMotion
+
+    if(!isMotion){
+      console.log("no motion");
+    } else {
+      console.log("motion")
+    }
+
+    document.body.classList.toggle('motion-toggle'); // Toggle the .dark-mode class
     toggleIcons(); // Call the function to toggle icons
   });
 

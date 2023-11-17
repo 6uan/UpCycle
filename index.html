@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UpCycle</title>
   <link rel="icon" type="assets/x-icon" href="assets/uc_favicon1.ico">
   <link href="sidenav.css" rel="stylesheet" type="text/css" />
@@ -19,8 +19,18 @@
     <span></span>
   </div>
 
+  <div class="motion">
+    <a id="motionButton" style="border: none; display: inline-block;"> 
+      <img id="onIconDark" style="cursor: pointer; height:20px; display:none;" src="assets/toggle-on-dark.png">
+      <img id="onIconLight" style="cursor: pointer; height:20px; display: none;" src="assets/toggle-on-light.png">
+
+      <img id="offIconDark" style="cursor: pointer; height:20px; display:none;" src="assets/toggle-off-dark.png">
+      <img id="offIconLight" style="cursor: pointer; height:20px; display: none;" src="assets/toggle-off-light.png">
+    </a>
+  </div>
+
   <div class="darkmode">
-    <a id="myButton" style="border: none; display: inline-block;"> 
+    <a id="darkmodeButton" style="border: none; display: inline-block;"> 
       <img id="moonIcon" style="cursor: pointer; height:20px;" src="assets/moon-solid.png">
       <img id="sunIcon" style="cursor: pointer; height:20px; display: none; " src="assets/sun-solid.png">
     </a>
@@ -58,7 +68,7 @@
 
         <div class="inner-container-sec1 text-align text-padding"> <!--DIV BOTTOM LEFT SECTION (INNTER3) -->
           <h2>👋 Welcome to UpCycle</h2>
-          <p>If you're passionate about making better choices in fashion and caring for our planet, you're in the right place. Dive in, explore, and discover how we can make a difference together. Every small change counts, and here at UpCycle, we're all about creating big impacts with those small changes. Happy browsing!</p>
+          <p style="padding: 40px 200px 0 200px;">If you're passionate about making better choices in fashion and caring for our planet, you're in the right place. Dive in, explore, and discover how we can make a difference together. Every small change counts, and here at UpCycle, we're all about creating big impacts with those small changes. Happy browsing!</p>
         </div> <!--DIV BOTTOM LEFT SECTION END -->
 
         <div class="inner-container-sec1 image-container" id="img"> <!--DIV BOTTOM RIGHT IMG (INNTER3) -->
@@ -170,28 +180,43 @@
       <p>UNDER CONSTRUCTION 🚧</p>
   </section> 
     
-    <section class="centered-content text-padding" id="sec-5">
-      <h2>Join Our Petition Against Fast Fashion</h2>
-      <p class="text-padding">Fast fashion's hidden cost isn't just in your wallet but in the environment and human rights abuses. Signing this petition is your chance to demand change, to advocate for ethical labor practices, and to push for sustainable fashion that doesn't sacrifice our planet for profit. </p>
+    <section class="" id="sec-5">
 
-      <br> 
-      <p class="text-padding">Your signature can drive the reform needed to break the cycle of throwaway clothes and build a fashion industry that values people and the environment. Take action now—sign and stand up for a responsible fashion future.</p>
+<div class="outer-container-sec5">
+
+
+
+      <div class="inner-container-sec5">
+        <h2 class="text-padding text-align" style="font-size: 60px; padding-top: 20px;">Join Our Petition Against Fast Fashion</h2>
+         <p style="padding: 50px 150px 0 150px;">Fast fashion's hidden cost isn't just in your wallet but in the environment and human rights abuses. Signing this petition is your chance to demand change, to advocate for ethical labor practices, and to push for sustainable fashion that doesn't sacrifice our planet for profit. </p>
+
+         <br> 
+         <p style="padding: 0 150px 50px 150px;">Your signature can drive the reform needed to break the cycle of throwaway clothes and build a fashion industry that values people and the environment. Take action now—sign and stand up for a responsible fashion future.</p>
+        </div>
+
+
+<div style="display: flex; flex-flow: row wrap; justify-content: center;">
+
+
+
+     <div class="inner-container-sec5-form border">
 
       <form id="petitionForm">
         <label>Full Name
-          <input type="text" id="nameInput" name="name">
+          <input required="true" type="text" id="nameInput" name="name">
         </label>
         <label>Email Address
-          <input type="email" id="emailInput" name="email">
+          <input required="true" type="email" id="emailInput" name="email">
         </label>
         <label>Comments (optional)
-          <textarea id="commentInput" name="comments"></textarea>
+          <textarea placeholder="I Want To Help!" id="commentInput" name="comments"></textarea>
         </label>
         <input type="submit" id="submitPetition" value="Sign Petition">
       </form>
+</div>
 
-      <div class="flex-sig">
-        
+      <div class="inner-container-sec5-form text-align border" style="padding-bottom: 30px;" >
+
       
       <h2>Signatures</h2>
       <div id="signatureCount">Total Signatures: 0</div>
@@ -199,7 +224,11 @@
         <!-- Signatures will be added here -->
       </ul>
         </div>
-    </section>
+      
+</div>
+
+    </div> 
+  </section>
 
   <div class="sidenav">
     

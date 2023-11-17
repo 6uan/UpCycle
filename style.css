@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Ubuntu:wght@300;400;500;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -16,6 +23,16 @@ html {
   overflow-y: scroll;
   height: 100vh;
 }
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  overflow-x: hidden;
+}
+
 
 body {
   background-color: #F5F5F5; 
@@ -47,7 +64,7 @@ body {
 /* For the quote container */
 .inner-container-sec1#quote {
   background: none;
-  min-height:200px;
+  min-height:250px;
   position: relative; 
   padding: 20px; /* Add some padding */
   display: flex; /* Use flexbox for layout */
@@ -161,7 +178,7 @@ body {
 
 .outer-container-sec2 {
   width: 95%;
-  height: 95%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -213,7 +230,7 @@ body {
 .outer-container-sec3 {
   
   width: 95%;
-  height: 95%;
+  height: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -320,13 +337,35 @@ label {
   background-color: pink;
 }
 
-section {
-  height: 100vh;
+.outer-container-sec5 {
+  width: 70%;
+  height: 80%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  scroll-snap-align: start;
-  overflow-x: hidden;
+  min-width: 300px;
+}
+
+
+.inner-container-sec5 {
+  background: rgba(0, 0, 0, .15);
+  border-radius: 10px;
+  min-width: 100px;
+  margin: 5px 5px 40px 4px;
+  overflow: hidden;
+  color: #333;
+}
+
+
+.inner-container-sec5-form {
+  background: rgba(0, 0, 0, .15);
+  border-radius: 10px;
+  min-width: 100px;
+
+  width: 400px;
+  margin: 5px 5px 40px 4px;
+  overflow: hidden;
+  color: #333;
 }
 
 section#sec-3 { /* added flex-direction to sec 3 onl */
@@ -341,4 +380,14 @@ section#sec-3 { /* added flex-direction to sec 3 onl */
 
 .border {
   border: deeppink solid 2px;
+}
+
+
+.motion {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 95px;
+  display: block;
+  z-index: 100;
 }
