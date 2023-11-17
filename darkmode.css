@@ -10,15 +10,15 @@
   z-index: 100;
 }
 
-.dark-mode {
-  color: #ffffff; /* Light text */
-}
+/*.dark-mode p, h1, h2, form, div{
+  color: #ffffff; 
+}*/
 
 .dark-mode a {
   color: #9A9A9A; /* Lighter text for links */
 }
 
-.dark-mode .inner-container-sec1,
+.dark-mode .container,
 .dark-mode .text-container,
 .dark-mode .inner-container-sec2,
 .dark-mode .inner-container-sec3,
@@ -27,6 +27,8 @@
 .dark-mode .inner-container-sec3-grid {
   background: rgba(100, 100, 123, 40);
 }
+
+/*rgba(100, 100, 123, 40)*/
 
 .dark-mode .sidenav {
   background-color: #2C2C2C; /* Darker side nav */

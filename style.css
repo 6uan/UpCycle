@@ -19,15 +19,11 @@ html {
 
 body {
   background-color: #F5F5F5; 
-  margin-top: 10px;
 }
 
 
 /* STYLES FOR SECTION 1*/
 
-.first {
-  background-color: #F5F5F5;
-}
 
 .outer-container-sec1 {
   width: 95%;
@@ -98,15 +94,6 @@ body {
    justify-content: center;
 }
 
-.boldest {
-  font-size: 60px;
-}
-
-.bold {
-  font-size: 20px;
-  font-family: sans-serif;
-}
-
 @media (max-width: 700px) {
   .outer-container-sec1 {
     grid-template-columns: 1fr;
@@ -161,7 +148,7 @@ body {
 .link-style a{
   text-decoration: none;
   font-family:'Ubuntu', sans-serif;
-  color: white;
+  color: black;
 }
 
 .link-style :hover{
@@ -194,15 +181,14 @@ body {
 
 .inner-container-sec2 {
   background: rgba(0, 0, 0, .15);
+  border-radius: 10px;
   min-width: 100px;
   height: 20%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin: 3px 3px 5px 5px;
   overflow:scroll;
-  color: #ffffff;
+  color: black;
 }
+
 
 .box-align {
   display: flex;
@@ -222,10 +208,6 @@ body {
   object-fit: cover;
 }
 
-.second {
-  background-color: #F5F5F5;
-}
-
 /* STYLE FOR SECTION 3 */
 
 .outer-container-sec3 {
@@ -239,44 +221,33 @@ body {
 
 .inner-container-sec3 {
   background: rgba(0, 0, 0, .15);
+  border-radius: 10px;
   min-width: 100px;
   height: 50%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin: 5px 5px 3px 3px;
   overflow:hidden;
-  color: #ffffff;
+  color: black;
 }
 
 .inner-container-sec3-title {
   background: rgba(0, 0, 0, .15);
+  border-radius: 10px;
   min-width: 100px;
   height: 10%;
   margin: 10px;
   overflow:hidden;
-  color: #ffffff;
-}
-
-.inner-container-sec3-button {
-  background: rgba(0, 0, 0, .15);
-  min-width: 100px;
-  height: 5%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 3px;
-  margin-right: 3px;
-  overflow:hidden;
-  color: #ffffff;
+  color: black;
 }
 
 .inner-container-sec3-grid {
   background: rgba(0, 0, 0, 0.15);
-  min-width: 100px;
-  height: 90%;
+  min-width: 300px;
+  border-radius: 10px;
+  height: 70%;
   margin: 20px;
+  padding: 20px;
   overflow:hidden;
-  color: #ffffff;
+  color: black;
 }
 
 .grid-container {
@@ -302,10 +273,13 @@ body {
 }
 
 .video-item {
+    margin-top: 50px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     opacity: 100%;
+    min-height: 250px;
 }
 
 .video-thumbnail {
@@ -321,18 +295,6 @@ body {
 .video-link {
     color: blue;
     text-decoration: none;
-}
-
-.third {
-  background-color: #F5F5F5;
-}
-
-.fourth {
-  background-color: #F5F5F5;
-}
-
-.fifth {
-  background-color: #F5F5F5;
 }
 
 .centered-content {
@@ -379,24 +341,4 @@ section#sec-3 { /* added flex-direction to sec 3 onl */
 
 .border {
   border: deeppink solid 2px;
-}
-
-#hamburger-menu {
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  display: block;
-  z-index: 100;
-}
-
-#hamburger-menu span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #333;
-  border-radius: 3px;
-  z-index: 3;
 }
