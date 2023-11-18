@@ -74,69 +74,109 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
 
-  // Event listener for motion
   toggleMotionButton.addEventListener('click', () => {
     isMotion = !isMotion; // Toggle the state of isMotion
-
-    if(!isMotion){
-      console.log("no motion");
+  
+    // Log the motion state to the console
+    if (!isMotion) {
+      console.log("Motion: OFF");
+      // Select all elements with the 'revealable' class and remove it
+      document.querySelectorAll('.revealable').forEach(el => {
+        el.classList.remove('revealable');
+        // Optionally, add a marker class to know which elements to add 'revealable' back to
+        el.classList.add('was-revealable');
+      });
     } else {
-      console.log("motion")
+      console.log("Motion: ON");
+      // Select all elements with the 'was-revealable' class and add 'revealable' back
+      document.querySelectorAll('.was-revealable').forEach(el => {
+        el.classList.add('revealable');
+        // Remove the marker class as it's no longer needed
+        el.classList.remove('was-revealable');
+      });
     }
-
-    document.body.classList.toggle('motion-toggle'); // Toggle the .dark-mode class
-    toggleIcons(); // Call the function to toggle icons
+  
+    // Toggle the 'motion-toggle' class on the body, depending on the isMotion state
+    document.body.classList.toggle('motion-toggle', isMotion);
+  
+    // Call the function to update the icons
+    toggleIcons();
   });
+  
 
   // Call toggleIcons initially if needed
   toggleIcons();
 });
 
 
-// PETITION FORM LOGIC
-
 document.addEventListener('DOMContentLoaded', () => {
   const signatureList = document.getElementById('signatureList');
   const signatureCount = document.getElementById('signatureCount');
+  const modal = document.getElementById('thanks-modal');
+  const modalContent = document.getElementById('thanks-modal-content');
+  const closeModalButton = document.getElementById('close-modal'); // Get the close button
   let numberOfSignatures = 0;
+
+  function validateForm() {
+    let person = {
+      name: document.getElementById('nameInput').value.trim(),
+      email: document.getElementById('emailInput').value.trim(),
+      comments: document.getElementById('commentInput').value.trim(),
+    };
+
+    // Simple form validation check
+    if (person.name && person.email.includes('@')) {
+      return person;
+    } else {
+      console.error('Form is invalid');
+      return null;
+    }
+  }
+
+  function addSignature(person) {
+    numberOfSignatures++;
+    signatureCount.textContent = `Total Signatures: ${numberOfSignatures}`;
+    let listItem = document.createElement('li');
+    listItem.textContent = `🖊️ ${person.name} supports this cause.`;
+    signatureList.appendChild(listItem);
+  }
+
+  function toggleModal(person) {
+    modalContent.textContent = `Thank you for your support, ${person.name}!`;
+    modal.style.display = 'flex'; // Show the modal
+    console.log("Adding Flex!")
+    closeModalButton.classList.remove('hidden'); // Make the close button visible
+
+    // Set a timeout to hide the modal after 4 seconds
+    let timeoutId = setTimeout(() => {
+      closeModal();
+    }, 40000);
+
+    // Close modal button event
+    closeModalButton.onclick = () => {
+      closeModal();
+      clearTimeout(timeoutId); // Prevent the timeout from hiding the modal again
+    };
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    closeModalButton.classList.add('hidden'); // Re-hide the close button
+  }
 
   document.getElementById('petitionForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
-    let form = this; // 'this' refers to the form element
-    let elements = form.elements;
-    let formIsValid = true;
-    let nameInputValue = ''; // Initialize variable to store the name
-
-    for (let i = 0; i < elements.length; i++) {
-      let input = elements[i];
-      if (input.type !== "submit" && input.type !== "button") { // Exclude buttons and submit inputs
-        if (input.value.trim() === "" && input.name !== "comments") { // Since comments are optional
-          // Add error class if the field is required and empty
-          input.classList.add('error');
-          formIsValid = false;
-        } else {
-          // Remove error class from inputs that are not empty
-          input.classList.remove('error');
-          if (input.name === 'name') { // Capture the name input value
-            nameInputValue = input.value.trim();
-          }
-        }
-      }
-    }
-
-    if (formIsValid && nameInputValue) {
-      numberOfSignatures++;
-      signatureCount.textContent = `Total Signatures: ${numberOfSignatures}`;
-
-      let listItem = document.createElement('li');
-      listItem.textContent = nameInputValue; // Use the captured name value
-      signatureList.appendChild(listItem);
-
-      form.reset(); // Reset the form for the next input
+    let person = validateForm(); // Validate the form and get the person object
+    if (person) {
+      addSignature(person);
+      toggleModal(person);
+      this.reset(); // Reset the form for the next input
     }
   });
 });
+
+
 
 // CLOSING SIDENAV
 
