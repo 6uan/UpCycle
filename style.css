@@ -17,12 +17,13 @@ html {
   width: 0;
   background: transparent;
 }
-
-.container { /* SNAP SCROLLING */
+/*
+.container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
 }
+*/
 
 section {
   height: 100vh;
@@ -30,6 +31,7 @@ section {
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
+  scroll-snap-stop: always; /* This ensures that the snapping stops at each section */
   overflow-x: hidden;
 }
 
@@ -50,8 +52,6 @@ body {
   min-width: 300px;
 }
 
-/* Boilerplate should be basic alignmnet */
-
 .inner-container-sec1 {
   background: rgba(0, 0, 0, .15);
   border-radius: 10px;
@@ -59,6 +59,10 @@ body {
   margin: 5px 5px 40px 4px;
   overflow: hidden;
   color: #333;
+}
+
+.welcome-padding {
+  padding: 40px 100px 0 100px;
 }
 
 /* For the quote container */
@@ -86,6 +90,10 @@ body {
   margin: 0 0 10px 0; /* Add some space below the quote */
 }
 
+.text-container{
+  min-width: 400px;
+}
+
 /* For the author text */
 .inner-container-sec1#quote p {
   margin: 0; /* Remove default margin */
@@ -101,6 +109,9 @@ body {
   .inner-container-sec1#quote p {
     font-size: 0.8em; /* Smaller font size on medium screens */
   }
+  .welcome-padding{
+    padding: 0;
+  }
 }
 
 
@@ -111,14 +122,14 @@ body {
    justify-content: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .outer-container-sec1 {
     grid-template-columns: 1fr;
   }
   
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .inner-container-sec1 {
     height: 300px;
   }
@@ -183,10 +194,18 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   overflow-x: hidden;
+  align-items: center;
 }
 
 @media (max-width: 700px) {
   .outer-container-sec2 {
+    width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow-x: hidden;
+  align-items: center;
   }
 }
 
@@ -199,6 +218,7 @@ body {
 .inner-container-sec2 {
   background: rgba(0, 0, 0, .15);
   border-radius: 10px;
+  padding: 0 70px 0 70px;
   min-width: 100px;
   height: 20%;
   margin: 3px 3px 5px 5px;
@@ -206,12 +226,13 @@ body {
   color: black;
 }
 
-
 .box-align {
   display: flex;
+  border-radius: 10px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 90%;
 }
 
 .box-sec2{
@@ -227,12 +248,19 @@ body {
 
 /* STYLE FOR SECTION 3 */
 
+section#sec-3 { /* added flex-direction to sec 3 onl */
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
 .outer-container-sec3 {
   
   width: 95%;
   height: 90%;
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
 }
 
 
@@ -260,7 +288,7 @@ body {
   background: rgba(0, 0, 0, 0.15);
   min-width: 300px;
   border-radius: 10px;
-  height: 70%;
+  height: 75%;
   margin: 20px;
   padding: 20px;
   overflow:hidden;
@@ -274,6 +302,7 @@ body {
     grid-template-columns: repeat(2, 1fr); /* 5 columns */
     grid-template-rows: repeat(5, 1fr); /* 2 rows */
     gap: 5px; /* space between grid items */
+    overflow-x: hidden;
 }
 
 @media (max-width: 700px) {
@@ -282,7 +311,7 @@ body {
   .grid-container {
       display: grid;
       padding-top: 70px;
-      padding-bottom: 5px;
+      padding-bottom: 50px;
       grid-template-columns: repeat(1, 1fr);
       gap: 5px; /* space between grid items */
   }
@@ -291,7 +320,7 @@ body {
 
 .video-item {
     margin-top: 50px;
-    margin-bottom: 30px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,9 +380,20 @@ label {
   background: rgba(0, 0, 0, .15);
   border-radius: 10px;
   min-width: 100px;
+  min-height: 400px;
   margin: 5px 5px 40px 4px;
   overflow: hidden;
   color: #333;
+}
+
+.petition-text{
+  padding: 50px 150px 0 150px;
+}
+
+@media(max-width: 1100px) {
+.petition-text{
+    padding: 15px;
+  }
 }
 
 
@@ -366,16 +406,6 @@ label {
   margin: 5px 5px 40px 4px;
   overflow: hidden;
   color: #333;
-}
-
-section#sec-3 { /* added flex-direction to sec 3 onl */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;  
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-  overflow-x: hidden;
 }
 
 .border {
@@ -391,3 +421,17 @@ section#sec-3 { /* added flex-direction to sec 3 onl */
   display: block;
   z-index: 100;
 }
+
+.revealable {
+  /* Initial state, hidden */
+  opacity: 0 !important;
+  transform: translateY(150px) !important;
+  transition: transform 2s ease, opacity 2s ease !important;
+}
+
+.active {
+  /* Final state, shown */
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
+

@@ -162,3 +162,34 @@ function toggleSidenav() {
   }
 }
 
+
+// Motion Logic
+
+let animation = {
+  revealDistance: 150,
+  initialOpacity: 0,
+  transitionDelay: 0,
+  transitionDuration: '2s',
+  transitionProperty: 'all',
+  transitionTimingFunction: 'ease'
+};
+
+let revealableContainers = document.querySelectorAll('.revealable');
+
+function reveal() {
+  let windowHeight = window.innerHeight;
+  for (let i = 0; i < revealableContainers.length; i++) {
+    let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
+    if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
+      revealableContainers[i].classList.add('active');
+      console.log('Adding active to:', revealableContainers[i]);
+    } else {
+      revealableContainers[i].classList.remove('active');
+      console.log('Removing active from:', revealableContainers[i]);
+    }
+  }
+}
+
+window.addEventListener('scroll', reveal);
+
+
