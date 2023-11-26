@@ -146,9 +146,9 @@
 
     <!-- SECTION 3 -->
     <section id="sec-3">
-
+      <div class="outer-container-sec3">
       <!-- TITLE DIV-->
-      <div class="inner-container-sec3-title text-align text-padding">
+      <div class="inner-container-sec3 text-align text-padding">
           <div style="font-size: 60px;">DIY + More</div>
         </div>
       
@@ -184,7 +184,8 @@
             </div>
 
         </div>
-    
+
+    </div>
     </section><hr>
 
     <!-- SECTION 4 -->
@@ -217,16 +218,26 @@
      <div class="inner-container-sec5-form">
 
       <form id="petitionForm">
-        <label>Full Name
-          <input required="true" type="text" id="nameInput" name="name">
+
+        <label class=" label-style">
+          Full Name
+          <input class="border input-style" placeholder="John Doe" required="true" type="text" id="nameInput" name="name">
         </label>
-        <label>Email Address
-          <input required="true" type="email" id="emailInput" name="email">
+
+        <label class="label-style">
+          Email Address
+          <input class="border input-style" placeholder="jdoe@gmail.com" required="true" type="email" id="emailInput" name="email">
         </label>
-        <label>Comments (optional)
-          <textarea placeholder="I Want To Help!" id="commentInput" name="comments"></textarea>
+
+        <label class="label-style">
+          Comments (optional)
+          <textarea class="border input-style" placeholder="I Want To Help!" id="commentInput" name="comments"></textarea>
         </label>
-        <input type="submit" id="submitPetition" value="Sign Petition">
+
+        <label class="label-style">
+           <input class="input-style" type="submit" id="submitPetition" value="Sign Petition">
+        </label>
+       
       </form>
 </div>
 

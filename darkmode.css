@@ -15,7 +15,7 @@
 }*/
 
 .dark-mode a {
-  color: #9A9A9A; /* Lighter text for links */
+  color: var(--dark-text); /* Lighter text for links */
 }
 
 .dark-mode .container,
@@ -35,13 +35,13 @@
 }
 
 .dark-mode .hamburger span {
-  background-color: #CCCCCC !important;
+  background-color: var(--dark-text) !important;
 }
 
 .dark-mode .inner-container-sec1 .a {
-  color: #CCCCCC;
+  color: var(--dark-text);
 }
 
 .dark-mode .sidenav a {
-  color: #CCCCCC; /* Light text for side nav links */
+  color: var(--dark-text); /* Light text for side nav links */
 }
