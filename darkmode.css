@@ -18,6 +18,10 @@
   color: var(--dark-text); /* Lighter text for links */
 }
 
+.dark-mode .inner-container-sec1 {
+  background-color: rgba(0, 0, 0, .15);;
+}
+
 .dark-mode .container,
 .dark-mode .text-container,
 .dark-mode .inner-container-sec2,
