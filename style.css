@@ -200,7 +200,6 @@ section {
 
 }
 
-
 .text-align { /* Flexbox for text elements*/
    display: flex;
    flex-direction: column;
@@ -208,14 +207,32 @@ section {
    justify-content: center;
 }
 
-@media (max-width: 800px) {
-  .outer-container-sec1 {
-    grid-template-columns: 1fr;
+.text-resize{
+  font-size: 1.75vw;
+}
+
+@media (max-width: 1250px) {
+  .text-resize{
+    font-size: 1.5vw;
   }
-  
+}
+
+@media (max-width: 1015px) {
+  .text-resize{
+    font-size: 1.1vw;
+  }
 }
 
 @media (max-width: 800px) {
+
+  .text-resize{
+    font-size: 3.5vw;
+  }
+
+  .outer-container-sec1 {
+    grid-template-columns: 1fr;
+  }
+
   .inner-container-sec1 {
     height: 300px;
   }
@@ -223,6 +240,11 @@ section {
 .image-container{
     min-height: 660px;
   }
+
+.link-style{
+  height: 250px;
+}
+
 }
 
 
@@ -244,23 +266,24 @@ section {
 
 .link-style {
   display:flex;
-  font-family: var(--font-body);
+  height: 220px;
   flex-direction: column;
-  gap: 15px;
+  justify-content: space-between;
   font-size: 1em;
-  padding: 10px 12px 0 12px;
+  padding: 10px 10px 12px 10px;
+  font-family: var(--font-sidenav);
 }
 
 .link-style a{
   text-decoration: none;
-  
   color: var(--light-text);
   font-size: 1em;
+  font-size: 15px;
 }
 
 .link-style :hover{
   cursor: pointer;
-  color: lightblue;
+  color: var(--light);
 }
 
 
