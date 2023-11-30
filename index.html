@@ -9,78 +9,66 @@
   <link href="sidenav.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="darkmode.css" rel="stylesheet" type="text/css" />
+  <link href="output.css" rel="stylesheet" type="text/css" >
 </head>
 
 <body> 
 
-  <div class="hamburger" id="hamburger-menu" onclick="toggleSidenav()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <div class="motion">
-    <a id="motionButton" style="border: none; display: inline-block;"> 
-      <img id="onIconDark" style="cursor: pointer; height:20px; display:none;" src="assets/toggle-on-dark.png">
-      <img id="onIconLight" style="cursor: pointer; height:20px; display: none;" src="assets/toggle-on-light.png">
-
-      <img id="offIconDark" style="cursor: pointer; height:20px; display:none;" src="assets/toggle-off-dark.png">
-      <img id="offIconLight" style="cursor: pointer; height:20px; display: none;" src="assets/toggle-off-light.png">
-    </a>
-  </div>
-
-  <div class="darkmode">
-    <a id="darkmodeButton" style="border: none; display: inline-block;"> 
-      <img id="moonIcon" style="cursor: pointer; height:20px;" src="assets/moon-solid.png">
-      <img id="sunIcon" style="cursor: pointer; height:20px; display: none; " src="assets/sun-solid.png">
-    </a>
-  </div>
-
-  <div class="container">
+  <div>
     
-    <!-- SECTION 1 -->
+    <!-- SECTION 1 TAILWIND -->
     <section id="sec-1">
-      <div class="outer-container-sec1">
-        
+
+      <!-- CONTAINER -->
+      <div class="w-11/12 h-[95%] grid grid-cols-2 gap-4">
+
         <!-- QUOTE DIV -->
-        <div class="inner-container-sec1 text-align text-padding" id="quote">
-          <h1 style="font-size: 60px;" class="text-container">Buy Less, Choose Well, Make it Last</h1>
-          <p style="font-size: 20px;"class="text-container">-Vivienne Westwood</p>   
-          
+        <div class="relative min-h-[15rem] flex flex-col justify-center overflow-hidden rounded-lg px-10 bg-transparent" id="quote">
+          <h1 class="text-6xl min-w-[400px]">Buy Less, Choose Well, Make it Last</h1>
+          <p class="text-xl min-w-[400px] text-end">-Vivienne Westwood</p>   
         </div> 
  
         <!-- FOUNDATION DIV -->
-        <div class="inner-container-sec1 top-right-container-sec1">
+    
+        <div class="overflow-hidden rounded-lg bg-stonegray flex flex-col items-center justify-center">
 
-          <div class="text-align"><br>
-            <h1 class="text-padding text-resize"> Trending Foundations</h1>
-
-<div class="link-style">
+            <h1 class="px-10 pt-4 text-3xl font-bold text-center">Trending Foundations</h1> 
             
-            <a href="https://www.fashionrevolution.org/"> Fashion Revolution</a>
-            <a href="https://remake.world/"> Remake Our World</a>
-            <a href="https://fashiontakesaction.com/"> Fashion Takes Action</a>
-            <a href="https://cleanclothes.org/"> Clean Clothes Campaign</a>
-            <a href="https://slowfactory.foundation/"> Slow Factory Foundation</a>
-   </div>
-          
-          </div>
-          
+            <div class="flex flex-col grow-0 gap-5 py-4">
+              <a href="https://www.fashionrevolution.org/"> Fashion Revolution</a>
+              <a href="https://remake.world/"> Remake Our World</a>
+              <a href="https://fashiontakesaction.com/"> Fashion Takes Action</a>
+              <a href="https://cleanclothes.org/"> Clean Clothes Campaign</a>
+              <a href="https://slowfactory.foundation/"> Slow Factory Foundation</a>
+             </div>     
         </div> 
+
+       <!-- ROW SPAN -->
+      <div class="row-span-2">
 
         <!-- WELCOME DIV -->
-        <div class="inner-container-sec1 text-align text-padding">
-          <h2>👋 Welcome to UpCycle</h2>
-          <p class="welcome-padding">If you're passionate about making better choices in fashion and caring for our planet, you're in the right place. Dive in, explore, and discover how we can make a difference together. Every small change counts, and here at UpCycle, we're all about creating big impacts with those small changes. Happy browsing!</p>
+        <div class="overflow-hidden rounded-lg bg-stonegray text-center flex-col items-center justify-center gap-5 px-10 h-[250px]">
+          <h2 class="py-4 font-bold text-3xl">👋 Welcome to UpCycle</h2>
+          <div>
+            <p class="px-3">If you're passionate about making better choices in fashion and caring for our planet, you're in the right place. Dive in, explore, and discover how we can make a difference together. Every small change counts, and here at UpCycle, we're all about creating big impacts with those small changes. Happy browsing!</p>
+          </div>
         </div> 
 
-        <!-- IMAGE DIV -->
-        <div class="inner-container-sec1 image-container" id="img"> 
-          <img id="light_img" src="assets/sample4.jpg" class="bottom-right-img"> 
-          <img id="dark_img" src="assets/sample5.jpg" class="bottom-right-img" style="display: none;">
+        <!-- DOWN BUTTON -->
+        <div class="overflow-hidden rounded-lg bg-stonegray text-center flex-col items-center justify-center gap-5 px-10 mt-4">
+          <h2 class="py-4 font-bold text-3xl"> ⬇️ Add Button</h2>
         </div> 
 
       </div>
+
+        <!-- IMAGE DIV -->
+        <div class="overflow-hidden rounded-lg min-h-[360px]" id="img"> 
+          <img id="light_img" src="assets/sample4.jpg" class="h-[100%] w-[100%] object-cover"> 
+          <img id="dark_img" src="assets/sample5.jpg" class="h-[100%] w-[100%] object-cover" style="display: none;">
+        </div>         
+
+      </div>
+
     </section><hr>
     
     <!-- SECTION 2-->
@@ -88,7 +76,7 @@
        <div class="outer-container-sec2"> 
          
           <!-- TOP PICKS DIV -->
-          <div class="inner-container-sec2 text-align">
+          <div class="inner-container-sec2 flex flex-col items-center justify-center">
             <h1 style="padding-bottom: 20px;"> TOP PICKS</h1>
             <p>There are some brands out there that are doing a great job thinking about our planet. They're making clothes in a way that's better for the environment and for people. When you buy from these brands, you're helping make a positive change.</p>
           </div>
@@ -117,7 +105,7 @@
 
          
           <!-- BAD PICKS DIV -->
-          <div class="inner-container-sec2 text-align">
+          <div class="inner-container-sec2 flex flex-col items-center justify-center">
             <h1 style="padding-bottom: 20px">RED FLAGS</h1>
             <p>Sadly, not all brands are thinking about the planet. Some are still making clothes in ways that can hurt our environment. It's good to know who they are, so you can decide if you really want to buy from them.</p>
             </div>
@@ -149,7 +137,7 @@
 
       <div class="outer-container-sec3">
       <!-- TITLE DIV-->
-      <div class="inner-container-sec3 text-align text-padding">
+      <div class="inner-container-sec3 flex flex-col items-center justify-center px-10">
           <div style="font-size: 60px; font-weight: bolder;">DIY + More</div>
         </div>
       
@@ -204,7 +192,7 @@
 
       <!-- PETITION TITLE-->  
       <div class="inner-container-sec5">
-        <h2 class="text-padding text-align" style="font-size: 30px; padding-top: 20px;">Join Our Petition Against Fast Fashion</h2>
+        <h2 class="px-10 flex flex-col items-center justify-center" style="font-size: 30px; padding-top: 20px;">Join Our Petition Against Fast Fashion</h2>
         
          <p class="petition-text">Fast fashion's hidden cost isn't just in your wallet but in the environment and human rights abuses. Signing this petition is your chance to demand change, to advocate for ethical labor practices, and to push for sustainable fashion that doesn't sacrifice our planet for profit. </p>
 
@@ -243,7 +231,7 @@
       </form>
 </div>
 
-      <div class="inner-container-sec5-form text-align" style="padding-bottom: 30px;" >
+      <div class="inner-container-sec5-form flex flex-col items-center justify-center" style="padding-bottom: 30px;" >
 
       
       <h2>Signatures</h2>
@@ -272,36 +260,90 @@
     </div> 
   </section>
 
-    <!-- SIDENAV -->
-    <div class="sidenav">
+    <!-- HAMBURGER MENU -->
+    <div class="fixed border z-20 flex row">
     
-        <img class="logo" src="assets/upcycle_logo.png"><br><br><br>
+      <div class="pt-1 pl-7" id="hamburger-menu" onclick="toggleSidenav()">
+    <span></span>
+    <span></span>
+    <span></span>
+      </div>
+
+      <div class="motion pl-7">
+    <a id="motionButton" style="border: none; display: inline-block;"> 
+      <img id="onIconDark" style="cursor: pointer; height:20px; display:none;" src="assets/toggle-on-dark.png">
+      <img id="onIconLight" style="cursor: pointer; height:20px; display: none;" src="assets/toggle-on-light.png">
+
+      <img id="offIconDark" style="cursor: pointer; height:20px; display:none;" src="assets/toggle-off-dark.png">
+      <img id="offIconLight" style="cursor: pointer; height:20px; display: none;" src="assets/toggle-off-light.png">
+    </a>
+      </div>
+
+      <div class="darkmode pl-7">
+    <a id="darkmodeButton" style="border: none; display: inline-block;"> 
+      <img id="moonIcon" style="cursor: pointer; height:20px;" src="assets/moon-solid.png">
+      <img id="sunIcon" style="cursor: pointer; height:20px; display: none; " src="assets/sun-solid.png">
+    </a>
+      </div>
+
+    </div>
+
+    <!-- SIDENAV TAILWIND 70%-->
+    <div class="sidenav h-[100%] w-0 fixed inline-block flex-col z-10 top-0 left-0 bg-sage overflow-x-hidden pt-16 duration-300">
     
+      <div class="block flex justify-center pb-10">
+      <img class= "h-36 w-36" src="assets/upcycle_logo.png">
+      </div>
+
+    <div class="font-bold no-underline text-xl font-ubuntu text-offwhite inline-block">
+
     <a href="#sec-1">
-      <img style="padding-left: 10px; height: 20px; vertical-align: middle;" src="assets/house-solid.png">
-      Homepage
+
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+        <img class="h-5" src="assets/house-solid.png">
+        Homepage
+      </div>
+      
     </a>
 
     <a href="#sec-2">
-      <img style="padding-left: 10px; padding-right: 3px; height: 25px; vertical-align: middle;" src="assets/award-solid.png">
+
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <img class="h-6 pr-1"  src="assets/award-solid.png">
       Brands
+      </div>
+
     </a>
 
     <a href="#sec-3">
-      <img style="padding-left: 10px; height: 17px; vertical-align: middle;"src="assets/photo-film-solid.png">
+
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <img class="h-4" src="assets/photo-film-solid.png">
       DIY
+      </div>
+
     </a>
 
     <a href="#sec-4">
-     <img style="padding-left: 10px; padding-right: 2px; height: 20px; vertical-align: middle;"src="assets/recycle-solid.png">
+
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <img class="h-5" src="assets/recycle-solid.png">
       Impacts
+      </div>
+
     </a>
 
     <a href="#sec-5">
-      <img style="padding-left: 10px; height: 20px; vertical-align: bottom;" src="assets/newspaper-solid.png">
+
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <img class="h-5 " src="assets/newspaper-solid.png">
       Petition
+      </div>
+
     </a>
-    
+
+    </div>
+
       </div>
 
     </div>

@@ -21,8 +21,6 @@
   --dark: #9fa287;
   --light-text: #121212;
   --dark-text: #CCCCCC;
-  
-
   --font-sidenav:'Ubuntu', sans-serif;
   --font-body: 'Metropolis', sans-serif;
   --text-font-size: 14px;
@@ -40,6 +38,12 @@ body {
   background-color: var(--light)
 }
 
+.body{
+  background-color: var(--light)
+}
+
+
+
 ::-webkit-scrollbar { /* Remove scrollbar space */
   width: 10px;
 }
@@ -54,21 +58,7 @@ section {
   overflow-x: hidden;
 }
 
-.text-padding{
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-
 /* outer-containers for */
-
-.outer-container-sec1 {
-  width: 95%;
-  height: 95%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  min-width: 300px;
-}
 
 .outer-container-sec2 {
   width: 95%;
@@ -99,32 +89,6 @@ section {
 
 /* inner-containers */
 
-.inner-container-sec1 {
-  background: var(--inner-box);
-  border-radius: 10px;
-  min-width: 100px;
-  margin: 5px 5px 40px 4px;
-  overflow: hidden;
-  color: var(--light-text);
-}
-
-/* For the quote container */
-.inner-container-sec1#quote {
-  background: none;
-  min-height:250px;
-  position: relative; 
-  padding: 20px; /* Add some padding */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center content vertically */
-  text-align: center; /* Center text horizontally */
-}
-
-.inner-container-sec1#img {
-  background: none;
-  min-height:400px;
-  position: relative; 
-}
 
 /* For the quote text */
 .inner-container-sec1#quote h1 {
@@ -173,11 +137,6 @@ section {
   justify-content: center;
 }
 
-
-.text-container{
-  min-width: 400px;
-}
-
 .welcome-padding {
   padding: 40px 100px 0 100px;
 }
@@ -196,38 +155,10 @@ section {
   .welcome-padding{
     padding: 0;
   }
-
-
-}
-
-.text-align { /* Flexbox for text elements*/
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-}
-
-.text-resize{
-  font-size: 1.75vw;
-}
-
-@media (max-width: 1250px) {
-  .text-resize{
-    font-size: 1.5vw;
-  }
-}
-
-@media (max-width: 1015px) {
-  .text-resize{
-    font-size: 1.1vw;
-  }
 }
 
 @media (max-width: 800px) {
 
-  .text-resize{
-    font-size: 3.5vw;
-  }
 
   .outer-container-sec1 {
     grid-template-columns: 1fr;
@@ -237,9 +168,6 @@ section {
     height: 300px;
   }
   
-.image-container{
-    min-height: 660px;
-  }
 
 .link-style{
   height: 250px;
