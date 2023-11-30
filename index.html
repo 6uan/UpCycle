@@ -12,7 +12,7 @@
   <link href="output.css" rel="stylesheet" type="text/css" >
 </head>
 
-<body> 
+<body class="bg-lightwhite"> 
 
   <div>
     
@@ -34,7 +34,7 @@
 
             <h1 class="px-10 pt-4 text-3xl font-bold text-center">Trending Foundations</h1> 
             
-            <div class="flex flex-col grow-0 gap-5 py-4">
+            <div class="flex flex-col grow-0 gap-5 py-4 text-center">
               <a href="https://www.fashionrevolution.org/"> Fashion Revolution</a>
               <a href="https://remake.world/"> Remake Our World</a>
               <a href="https://fashiontakesaction.com/"> Fashion Takes Action</a>
@@ -71,61 +71,62 @@
 
     </section><hr>
     
-    <!-- SECTION 2-->
+    <!-- SECTION 2 TAILWIND -->
     <section id="sec-2" class="revealable"> 
-       <div class="outer-container-sec2"> 
+       <div class="w-11/12 h-11/12 flex flex-col justify-evenly overflow-x-hidden items-center"> 
          
-          <!-- TOP PICKS DIV -->
-          <div class="inner-container-sec2 flex flex-col items-center justify-center">
-            <h1 style="padding-bottom: 20px;"> TOP PICKS</h1>
+          <!-- TOP BRAND PICKS DIV -->
+          <div class="w-6/12 flex flex-col items-center justify-center">
+            <h1 class="py-4 text-3xl font-bold"> TOP BRAND PICKS</h1>
             <p>There are some brands out there that are doing a great job thinking about our planet. They're making clothes in a way that's better for the environment and for people. When you buy from these brands, you're helping make a positive change.</p>
           </div>
          
+          <!-- TOP BRAND PICKS IMAGES DIV -->
+          <div class="flex flex-row items-center justify-center inline-block w-4/5 pt-8 pb-10">
+            
+            <div class="w-3/12 h-36">
+              <img class="w-full h-full object-cover rounded-l-lg" src="assets/pantagonia_logo.jpg">
+              </div>
 
-          <!-- TOP PICKS IMAGES DIV -->
-          <div class="box-align">
-            
-            <div class="box-sec2">
-              <img class="img-box start" src="assets/pantagonia_logo.jpg">
+            <div class="w-3/12 h-36">
+              <img class="w-full h-full object-cover" src="assets/levi_logo.png">
               </div>
-            <div class="box-sec2">
-              <img class="img-box" src="assets/levi_logo.png">
+            <div class="w-3/12 h-36">
+              <img class="w-full h-full object-cover" src="assets/buckmason_logo.png">
               </div>
-            <div class="box-sec2">
-              <img class="img-box" src="assets/buckmason_logo.png">
+            <div class="w-3/12 h-36">
+              <img class="w-full h-full object-cover" src="assets/harvestmiller_logo.jpg">
               </div>
-            <div class="box-sec2">
-              <img class="img-box" src="assets/harvestmiller_logo.jpg">
-              </div>
-            <div class="box-sec2">
-              <img class="img-box end" src="assets/tentree_logo.png">
+            <div class="w-3/12 h-36">
+              <img class="w-full h-full object-cover rounded-r-lg" src="assets/tentree_logo.png">
               </div>
             
-            </div>
+          </div>
 
          
           <!-- BAD PICKS DIV -->
-          <div class="inner-container-sec2 flex flex-col items-center justify-center">
-            <h1 style="padding-bottom: 20px">RED FLAGS</h1>
+          <div class="w-6/12 flex flex-col items-center justify-center">
+            <h1 class="py-4 text-3xl font-bold">AVOID AT ALL COSTS</h1>
             <p>Sadly, not all brands are thinking about the planet. Some are still making clothes in ways that can hurt our environment. It's good to know who they are, so you can decide if you really want to buy from them.</p>
             </div>
 
           <!-- BAD PICKS IMAGES DIV -->
-          <div class="box-align">
-         <div class="box-sec2">
-           <img class="img-box start" src="assets/shein_logo.png">
+          <div class="flex flex-row items-center justify-center inline-block w-4/5 pt-8 pb-10">
+         
+            <div class="w-3/12 h-36">
+           <img class="w-full h-full object-cover rounded-l-lg" src="assets/shein_logo.png">
            </div>
-         <div class="box-sec2">
-           <img class="img-box" src="assets/forever21_logo.jpg">
+         <div class="w-3/12 h-36">
+           <img class="w-full h-full object-cover" src="assets/forever21_logo.jpg">
            </div>
-         <div class="box-sec2">
-           <img class="img-box" src="assets/hm_logo.jpg">
+         <div class="w-3/12 h-36">
+           <img class="w-full h-full object-cover" src="assets/hm_logo.jpg">
            </div>
-         <div class="box-sec2">
-           <img class="img-box" src="assets/fashionnova_logo.jpg">
+         <div class="w-3/12 h-36">
+           <img class="w-full h-full object-cover" src="assets/fashionnova_logo.jpg">
            </div>
-         <div class="box-sec2">
-           <img class="img-box end" src="assets/boohoo_logo.jpg">
+         <div class="w-3/12 h-36">
+           <img class="w-full h-full object-cover rounded-r-lg" src="assets/boohoo_logo.jpg">
            </div>
 
             </div>
@@ -134,44 +135,61 @@
 
     <!-- SECTION 3 -->
     <section id="sec-3">
+      <!-- GRID instead of flex? -->
+      <div class="w-11/12 h-11/12 flex flex-col overflow-hidden">
 
-      <div class="outer-container-sec3">
-      <!-- TITLE DIV-->
-      <div class="inner-container-sec3 flex flex-col items-center justify-center px-10">
-          <div style="font-size: 60px; font-weight: bolder;">DIY + More</div>
+      <!-- TITLE DIV span row 2 -->
+      <div class="flex flex-col items-center justify-center px-10 py-8">
+          <div class="text-3xl font-bold">DIY + More</div>
         </div>
       
       <!-- VIDEO CONTAINER DIV -->
-      <div class="inner-container-sec3-grid revealable">      
+      <div class="grid grid-cols-2 grid-rows-2 justify-items-center gap-5 rounded-lg bg-stonegray py-8 revealable">      
               <!-- Repeat this block for needed videos -->
-              <div class="video-item">
-                
-                  <img class="video-thumbnail" src="assets/Sample1_thumbnail.jpg" alt="Bucket Hat Thumbnail">
-                
-                  <div class="video-title">DIY Bucket Hat</div>
-                
-                  <a href="https://www.youtube.com/watch?v=ma-gDoTUHGw" class="video-link">Watch</a>
-                
+
+              <div class="rows-2">
+                <div class="overflow-hidden aspect-video h-52">
+                  <iframe class="w-full h-full" 
+                        src="https://www.youtube.com/embed/ma-gDoTUHGw?modestbranding=1&rel=0&iv_load_policy=3&controls=0" 
+                        title="DIY Bucket Hat" frameborder="0" allowfullscreen></iframe>
+                </div class="mt-4">
+                <p>TESTING</p>
+                <div>
+                </div>
               </div>
 
-            <div class="video-item">
-                <img class="video-thumbnail" src="assets/Sample2_thumbnail.webp" alt="Boxy Tee Thumbnail" class="video-thumbnail">
-                <div class="video-title">DIY Boxy Tee</div>
-                <a href="https://www.youtube.com/watch?v=R7BysYG7bP8" class="video-link">Watch</a>
-            </div>
+              <div class="rows-2">
+                <div class="overflow-hidden relative aspect-video h-52">
+                  <iframe class="w-full h-full"
+                  src="https://www.youtube.com/embed/4OHXiipYiRE?modestbranding=1&rel=0&iv_load_policy=3&controls=0"
+                  title="DIY CARGO PANTS" frameborder="0" allowfullscreen></iframe>
+                </div class="mt-4">
+                <p>TESTING</p>
+                <div>
+                </div>
+              </div>
 
-            <div class="video-item">
-                <img class="video-thumbnail" src="assets/Sample3_thumbnail.webp" alt="Cargo Pants" class="video-thumbnail">
-                <div class="video-title">DIY Cargo Pants</div>
-                <a href="https://youtu.be/4OHXiipYiRE?si=y_1PtRVL4V9bAqxu" class="video-link">Watch</a>
-            </div>
+              <div class="rows-2">
+                <div class="overflow-hidden relative aspect-video h-52">
+                  <iframe class="w-full h-full"
+                    src="https://www.youtube.com/embed/R7BysYG7bP8?modestbranding=1&rel=0&iv_load_policy=3&controls=0" 
+                    title="DIY SHIRT " frameborder="0" allowfullscreen></iframe>
+                </div class="mt-4">
+                <p>TESTING</p>
+                <div>
+                </div>
+              </div>
 
-            <div class="video-item">
-                <img class="video-thumbnail"src="assets/Sample4_thumbnail.webp" alt="Patterns class="video-thumbnail">
-                <div class="video-title">Learn Sew Patterns</div>
-                <a href="https://youtu.be/tBudnRKg_r8?si=1DHKW-Sx3ZUga1xY" class="video-link">Watch</a>
-            </div>
-
+              <div class="rows-2">
+                <div class="overflow-hidden relative aspect-video h-52">
+                  <iframe class="w-full h-full"
+                    src="https://www.youtube.com/embed/ZSe5N22P1rM?modestbranding=1&rel=0&iv_load_policy=3&controls=0" 
+                    title="DIY SWEATPANTS" frameborder="0" allowfullscreen></iframe>
+                </div class="mt-4">
+                <p>TESTING</p>
+                <div>
+                </div>
+              </div>
         </div>
 
     </div>
@@ -179,7 +197,7 @@
     </section><hr>
 
     <!-- SECTION 4 -->
-    <section id="sec-4">
+    <section class="font-bold text-3xl" id="sec-4">
 
       <img src="assets/retro-earth.png" style="bottom: 50px; right: 50px; height: 100px;">
       <p>UNDER CONSTRUCTION 🚧</p>
@@ -188,60 +206,72 @@
     
     <!-- SECTION 5 -->
     <section class="" id="sec-5">
-      <div class="outer-container-sec5">
+      <div class="w-11/12 h-11/12 block">
 
       <!-- PETITION TITLE-->  
-      <div class="inner-container-sec5">
-        <h2 class="px-10 flex flex-col items-center justify-center" style="font-size: 30px; padding-top: 20px;">Join Our Petition Against Fast Fashion</h2>
-        
-         <p class="petition-text">Fast fashion's hidden cost isn't just in your wallet but in the environment and human rights abuses. Signing this petition is your chance to demand change, to advocate for ethical labor practices, and to push for sustainable fashion that doesn't sacrifice our planet for profit. </p>
+      <div class="overflow-hidden rounded-lg bg-stonegray text-center flex-col items-center justify-center gap-5 px-10">
 
+        <h2 class="px-10 py-8 font-bold text-3xl" >Join Our Petition Against Fast Fashion</h2>
+         <p class="px-3">Fast fashion's hidden cost isn't just in your wallet but in the environment and human rights abuses. Signing this petition is your chance to demand change, to advocate for ethical labor practices, and to push for sustainable fashion that doesn't sacrifice our planet for profit. </p>
          <br> 
-         <p class="petition-text">Your signature can drive the reform needed to break the cycle of throwaway clothes and build a fashion industry that values people and the environment. Take action now—sign and stand up for a responsible fashion future.</p>
+         <p class="px-3 pb-10">Your signature can drive the reform needed to break the cycle of throwaway clothes and build a fashion industry that values people and the environment. Take action now—sign and stand up for a responsible fashion future.</p>
         </div>
 
-      <!-- FORM CONTAINER -->
-      <div style="display: flex; flex-flow: row wrap; justify-content: center;">
+    <!-- FORM CONTAINER -->
+    <div class="flex flex-row w-full gap-5 mt-5 h-96 justify-evenly">
 
 
+        <!-- FORM --> 
+        <div class="w-full columns-2 rounded-lg bg-stonegray">
 
-     <div class="inner-container-sec5-form">
 
-      <form id="petitionForm">
+          <form class="" id="petitionForm">
 
-        <label class=" label-style">
-          Full Name
-          <input class="border input-style" placeholder="John Doe" required="true" type="text" id="nameInput" name="name">
-        </label>
+            <div class="flex grow flex-col items-center">
 
-        <label class="label-style">
-          Email Address
-          <input class="border input-style" placeholder="jdoe@gmail.com" required="true" type="email" id="emailInput" name="email">
-        </label>
+              <label class="w-72 h-20 text-lg font-light">
+              Full Name
+              <input class="w-40 h-16" placeholder="John Doe" required="true" type="text" id="nameInput" name="name">
+              </label>
 
-        <label class="label-style">
-          Comments (optional)
-          <textarea class="border input-style" placeholder="I Want To Help!" id="commentInput" name="comments"></textarea>
-        </label>
+              <label class="w-72 h-20 text-lg font-light">
+              Email Address
+              <input class="w-40 h-16" placeholder="jdoe@gmail.com" required="true" type="email" id="emailInput" name="email">
+              </label>
 
-        <label class="label-style">
-           <input class="input-style" type="submit" id="submitPetition" value="Sign Petition">
-        </label>
-       
-      </form>
-</div>
+            </div>
 
-      <div class="inner-container-sec5-form flex flex-col items-center justify-center" style="padding-bottom: 30px;" >
+            <div>
 
-      
-      <h2>Signatures</h2>
-      <div id="signatureCount">Total Signatures: 0</div>
-      <ul id="signatureList">
-        <!-- Signatures will be added here -->
-      </ul>
+              <label class="w-72 h-20 text-lg font-light">
+              Comments (optional)
+              <textarea class="" placeholder="I Want To Help!" id="commentInput" name="comments"></textarea>
+              </label>
+
+              <label class="w-72 h-20">
+              <input class="w-28 h-10 bg-sage rounded-lg" type="submit" id="submitPetition" value="Sign Petition">
+              </label>
+
+          </div>
+
+          </form>
+
         </div>
-      
+
+        <!-- SIGNATURES -->
+        <div class="overflow-hidden rounded-lg bg-stonegray min-w-[320px]">
+
+          <div class="flex flex-col items-center justify-center">
+           <h2>Signatures</h2>
+            <div id="signatureCount">Total Signatures: 0</div>
+            <ul id="signatureList">
+               <!-- Signatures will be added here -->
+            </ul>
+          </div>
+
         </div>
+
+    </div>
 
         <div id="thanks-modal" class="modal">
           <!-- Modal content -->
@@ -261,7 +291,7 @@
   </section>
 
     <!-- HAMBURGER MENU -->
-    <div class="fixed border z-20 flex row">
+    <div class="fixed z-20 flex row">
     
       <div class="pt-1 pl-7" id="hamburger-menu" onclick="toggleSidenav()">
     <span></span>

@@ -7,16 +7,19 @@ module.exports = {
 
     fontFamily: {
       'ubuntu': ['Ubuntu', 'sans-serif'],
+      'metropolis': ['Metropolis', 'sans-serif'],
     },
 
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'offwhite': '#dedede',
+      'lightwhite': '#eae6de',
       'white': '#ffffff',
       'stonegray': '#C0C1B9',
       'sage': '#9fa287',
     },
+
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -33,6 +36,7 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+
     extend: {},
   },
   plugins: [ 
