@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UpCycle</title>
   <link rel="icon" type="assets/x-icon" href="assets/uc_favicon1.ico">
-  <link href="sidenav.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="darkmode.css" rel="stylesheet" type="text/css" />
   <link href="output.css" rel="stylesheet" type="text/css" >
@@ -291,15 +290,15 @@
   </section>
 
     <!-- HAMBURGER MENU -->
-    <div class="fixed z-20 flex row">
-    
-      <div class="pt-1 pl-7" id="hamburger-menu" onclick="toggleSidenav()">
-    <span></span>
-    <span></span>
-    <span></span>
+    <div class="fixed z-20 top-4 left-11 flex flex-row gap-3">
+
+      <div class="relative flex flex-col align-middle justify-center hover:cursor-pointer" id="hamburger-menu" onclick="toggleSidenav()">
+    <span class="w-6 h-[3px] mb-1 bg-softblack rounded-lg"></span>
+    <span class="w-6 h-[3px] mb-1 bg-softblack rounded-lg"></span>
+    <span class="w-6 h-[3px] mb-1 bg-softblack rounded-lg"></span>
       </div>
 
-      <div class="motion pl-7">
+      <div class="relative top-0 left-0 pb-2 motion">
     <a id="motionButton" style="border: none; display: inline-block;"> 
       <img id="onIconDark" style="cursor: pointer; height:20px; display:none;" src="assets/toggle-on-dark.png">
       <img id="onIconLight" style="cursor: pointer; height:20px; display: none;" src="assets/toggle-on-light.png">
@@ -309,13 +308,12 @@
     </a>
       </div>
 
-      <div class="darkmode pl-7">
+      <div class="relative top-0 left-0 pb-2 justify-center darkmode">
     <a id="darkmodeButton" style="border: none; display: inline-block;"> 
-      <img id="moonIcon" style="cursor: pointer; height:20px;" src="assets/moon-solid.png">
-      <img id="sunIcon" style="cursor: pointer; height:20px; display: none; " src="assets/sun-solid.png">
+      <img class="h-5" id="moonIcon" style="cursor: pointer;" src="assets/moon-solid.png">
+      <img class="h-5" id="sunIcon" style="cursor: pointer; display: none; " src="assets/sun-solid.png">
     </a>
       </div>
-
     </div>
 
     <!-- SIDENAV TAILWIND 70%-->
@@ -329,7 +327,7 @@
 
     <a href="#sec-1">
 
-      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-2xl active:text-softblack">
         <img class="h-5" src="assets/house-solid.png">
         Homepage
       </div>
@@ -338,7 +336,7 @@
 
     <a href="#sec-2">
 
-      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-2xl active:text-softblack">
       <img class="h-6 pr-1"  src="assets/award-solid.png">
       Brands
       </div>
@@ -347,7 +345,7 @@
 
     <a href="#sec-3">
 
-      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-2xl active:text-softblack">
       <img class="h-4" src="assets/photo-film-solid.png">
       DIY
       </div>
@@ -356,7 +354,7 @@
 
     <a href="#sec-4">
 
-      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-2xl active:text-softblack">
       <img class="h-5" src="assets/recycle-solid.png">
       Impacts
       </div>
@@ -365,7 +363,7 @@
 
     <a href="#sec-5">
 
-      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-lg">
+      <div class="flex flex-row items-center gap-3 pl-4 py-2 hover:text-white hover:drop-shadow-2xl active:text-softblack">
       <img class="h-5 " src="assets/newspaper-solid.png">
       Petition
       </div>

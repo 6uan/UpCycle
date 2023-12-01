@@ -3,10 +3,6 @@
 
 .darkmode {
   cursor: pointer;
-  position: fixed;
-  top: 15px;
-  left: 60px;
-  display: block;
   z-index: 100;
 }
 

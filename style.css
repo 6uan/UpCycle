@@ -47,11 +47,6 @@ label {
 
 .motion {
   cursor: pointer;
-  position: fixed;
-  top: 15px;
-  left: 95px;
-  display: block;
-  z-index: 100;
 }
 
 .revealable {
