@@ -221,39 +221,56 @@
 
 
         <!-- FORM --> 
-        <div class="w-full columns-2 rounded-lg bg-stonegray">
+        <div class="grow rounded-lg bg-stonegray">
 
+          <div class="w-full mx-auto">
 
-          <form class="" id="petitionForm">
+            <form class="px-8 pt-6 pb-8 mb-4 overflow-hidden" id="petitionForm">
 
-            <div class="flex grow flex-col items-center">
-
-              <label class="w-72 h-20 text-lg font-light">
+              <div class="mb-4">
+              <label class="block mb-2 text-sm font-light">
               Full Name
-              <input class="w-40 h-16" placeholder="John Doe" required="true" type="text" id="nameInput" name="name">
               </label>
+              <input class="w-full px-3 py-2 leading-tight rounded-md appearance-none focus:outline-none" 
+                     placeholder="John Doe"
+                     required="true" 
+                     type="text" 
+                     id="nameInput" 
+                     name="name">
+              </div>
 
-              <label class="w-72 h-20 text-lg font-light">
+              <div class="mb-4">
+              <label class="block mb-2 text-sm font-light">
               Email Address
-              <input class="w-40 h-16" placeholder="jdoe@gmail.com" required="true" type="email" id="emailInput" name="email">
               </label>
+              <input class="w-full px-3 py-2 leading-tight rounded-md appearance-none focus:outline-none" 
+                     placeholder="John@doe.com" 
+                     required="true" 
+                     type="email" 
+                     id="emailInput" 
+                     name="email">
+              
+              </div>
 
-            </div>
-
-            <div>
-
-              <label class="w-72 h-20 text-lg font-light">
+              <div class="mb-4">
+              <label class="block mb-2 text-sm font-light">
               Comments (optional)
-              <textarea class="" placeholder="I Want To Help!" id="commentInput" name="comments"></textarea>
               </label>
+              <textarea class="max-h-24 min-h-[40px] w-full px-3 py-2 leading-tight rounded-md appearance-none focus:outline-none" 
+                        placeholder="I Want To Help!" 
+                        id="commentInput" 
+                        name="comments"></textarea>
+              
+              <div class="ml-auto text-end">
+                <label class="block mb-2 text-sm font-light">
+                <input class="w-32 h-12 px-3 py-2 leading-tight rounded-md appearance-none focus:outline-none bg-sage" type="submit" id="submitPetition" value="Sign Petition">
+              </label>
+              </div>
 
-              <label class="w-72 h-20">
-              <input class="w-28 h-10 bg-sage rounded-lg" type="submit" id="submitPetition" value="Sign Petition">
-              </label>
+              </div>
+            </form>
 
           </div>
-
-          </form>
 
         </div>
 
@@ -290,7 +307,7 @@
   </section>
 
     <!-- HAMBURGER MENU -->
-    <div class="fixed z-20 top-4 left-11 flex flex-row gap-3">
+    <div class="w-44 mx-3 fixed z-20 top-4 left-0 flex flex-row gap-3 justify-center">
 
       <div class="relative flex flex-col align-middle justify-center hover:cursor-pointer" id="hamburger-menu" onclick="toggleSidenav()">
     <span class="w-6 h-[3px] mb-1 bg-softblack rounded-lg"></span>
@@ -319,7 +336,7 @@
     <!-- SIDENAV TAILWIND 70%-->
     <div class="sidenav h-[100%] w-0 fixed inline-block flex-col z-10 top-0 left-0 bg-sage overflow-x-hidden pt-16 duration-300">
     
-      <div class="block flex justify-center pb-10">
+      <div class="flex justify-center pb-10">
       <img class= "h-36 w-36" src="assets/upcycle_logo.png">
       </div>
 
