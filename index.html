@@ -14,13 +14,12 @@
 <body class="bg-lightwhite"> 
 
   <div>
-    
+
     <!-- SECTION 1 TAILWIND -->
     <section id="sec-1">
 
       <!-- CONTAINER -->
-      <div class="w-11/12 h-[95%] grid grid-cols-2 gap-4">
-
+      <div class="w-11/12 h-[95%] grid grid-cols-2 gap-4 border">
         <!-- QUOTE DIV -->
         <div class="relative min-h-[15rem] flex flex-col justify-center overflow-hidden rounded-lg px-10 bg-transparent" id="quote">
           <h1 class="text-6xl min-w-[400px]">Buy Less, Choose Well, Make it Last</h1>
@@ -66,23 +65,25 @@
           <img id="dark_img" src="assets/sample5.jpg" class="h-[100%] w-[100%] object-cover" style="display: none;">
         </div>         
 
-      </div>
+        </div>
 
     </section><hr>
     
     <!-- SECTION 2 TAILWIND -->
     <section id="sec-2" class="revealable"> 
-       <div class="w-11/12 h-11/12 flex flex-col justify-evenly overflow-x-hidden items-center"> 
+
+      <!-- CONTAINER -->
+      <div class="w-11/12 h-11/12 flex flex-col justify-evenly overflow-x-hidden items-center">
          
-          <!-- TOP BRAND PICKS DIV -->
-          <div class="w-6/12 flex flex-col items-center justify-center">
-            <h1 class="py-4 text-3xl font-bold"> TOP BRAND PICKS</h1>
-            <p>There are some brands out there that are doing a great job thinking about our planet. They're making clothes in a way that's better for the environment and for people. When you buy from these brands, you're helping make a positive change.</p>
-          </div>
+        <!-- TOP BRAND PICKS DIV -->
+        <div class="w-6/12 flex flex-col items-center justify-center">
+          <h1 class="py-4 text-3xl font-bold"> TOP BRAND PICKS</h1>
+          <p>There are some brands out there that are doing a great job thinking about our planet. They're making clothes in a way that's better for the environment and for people. When you buy from these brands, you're helping make a positive change.</p>
+        </div>
          
-          <!-- TOP BRAND PICKS IMAGES DIV -->
-          <div class="flex flex-row items-center justify-center inline-block w-4/5 pt-8 pb-10">
-            
+        <!-- TOP BRAND PICKS IMAGES DIV -->
+        <div class="flex flex-row items-center justify-center inline-block w-4/5 pt-8 pb-10">
+          
             <div class="w-3/12 h-36">
               <img class="w-full h-full object-cover rounded-l-lg" src="assets/pantagonia_logo.jpg">
               </div>
@@ -100,19 +101,18 @@
               <img class="w-full h-full object-cover rounded-r-lg" src="assets/tentree_logo.png">
               </div>
             
-          </div>
+        </div>
 
-         
-          <!-- BAD PICKS DIV -->
-          <div class="w-6/12 flex flex-col items-center justify-center">
-            <h1 class="py-4 text-3xl font-bold">AVOID AT ALL COSTS</h1>
-            <p>Sadly, not all brands are thinking about the planet. Some are still making clothes in ways that can hurt our environment. It's good to know who they are, so you can decide if you really want to buy from them.</p>
-            </div>
+        <!-- BAD PICKS DIV -->
+        <div class="w-6/12 flex flex-col items-center justify-center">
+          <h1 class="py-4 text-3xl font-bold">AVOID AT ALL COSTS</h1>
+          <p>Sadly, not all brands are thinking about the planet. Some are still making clothes in ways that can hurt our environment. It's good to know who they are, so you can decide if you really want to buy from them.</p>
+        </div>
 
-          <!-- BAD PICKS IMAGES DIV -->
-          <div class="flex flex-row items-center justify-center inline-block w-4/5 pt-8 pb-10">
+        <!-- BAD PICKS IMAGES DIV -->
+        <div class="flex flex-row items-center justify-center inline-block w-4/5 pt-8 pb-10">
          
-            <div class="w-3/12 h-36">
+         <div class="w-3/12 h-36">
            <img class="w-full h-full object-cover rounded-l-lg" src="assets/shein_logo.png">
            </div>
          <div class="w-3/12 h-36">
@@ -127,24 +127,27 @@
          <div class="w-3/12 h-36">
            <img class="w-full h-full object-cover rounded-r-lg" src="assets/boohoo_logo.jpg">
            </div>
+        </div>
 
-            </div>
+        </div>
 
-      </section><hr>
+    </section><hr>
 
     <!-- SECTION 3 -->
     <section id="sec-3">
-      <!-- GRID instead of flex? -->
+
+      <!-- CONTAINER -->
       <div class="w-11/12 h-11/12 flex flex-col overflow-hidden">
 
-      <!-- TITLE DIV span row 2 -->
-      <div class="flex flex-col items-center justify-center px-10 py-8">
+        <!-- TITLE DIV span row 2 -->
+        <div class="flex flex-col items-center justify-center px-10 py-8">
           <div class="text-3xl font-bold">DIY + More</div>
         </div>
       
-      <!-- VIDEO CONTAINER DIV -->
-      <div class="grid grid-cols-2 grid-rows-2 justify-items-center gap-5 rounded-lg bg-stonegray py-8 revealable">      
-              <!-- Repeat this block for needed videos -->
+        <!-- VIDEO CONTAINER DIV -->
+        <div class="grid grid-cols-2 grid-rows-2 justify-items-center gap-5 rounded-lg bg-stonegray py-8 revealable">      
+              
+          <!-- Repeat this block for needed videos -->
 
               <div class="rows-2">
                 <div class="overflow-hidden aspect-video h-52">
@@ -158,6 +161,9 @@
               </div>
 
               <div class="rows-2">
+
+              <div class="border rounded-md bg-sage">
+  
                 <div class="overflow-hidden relative aspect-video h-52">
                   <iframe class="w-full h-full"
                   src="https://www.youtube.com/embed/4OHXiipYiRE?modestbranding=1&rel=0&iv_load_policy=3&controls=0"
@@ -166,6 +172,8 @@
                 <p>TESTING</p>
                 <div>
                 </div>
+              </div>
+
               </div>
 
               <div class="rows-2">
@@ -289,6 +297,7 @@
 
     </div>
 
+        <!-- MODAL -->
         <div id="thanks-modal" class="modal">
           <!-- Modal content -->
           <div class="modal-content">
@@ -304,7 +313,7 @@
 
 
     </div> 
-  </section>
+    </section>
 
     <!-- HAMBURGER MENU -->
     <div class="w-44 mx-3 fixed z-20 top-4 left-0 flex flex-row gap-3 justify-center">
@@ -389,11 +398,11 @@
 
     </div>
 
-      </div>
-
     </div>
 
-<script src="script.js"></script>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
