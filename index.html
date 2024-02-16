@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UpCycle</title>
   <link rel="icon" type="assets/x-icon" href="assets/uc_favicon1.ico">
-  <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="darkmode.css" rel="stylesheet" type="text/css" />
   <link href="output.css" rel="stylesheet" type="text/css" >
 </head>
@@ -16,60 +15,61 @@
   <div>
 
     <!-- SECTION 1 TAILWIND -->
-    <section id="sec-1">
+    <section id="sec-1" class="h-auto lg:m-4">
 
       <!-- CONTAINER -->
-      <div class="w-auto mx-2 h-[95%] grid grid-row-1 lg:grid-cols-2 gap-4 border-2">
+      <div class="mx-2 mt-12 lg:mt-0 grid grid-row-1 lg:grid-cols-2 gap-4 border-2">
        
         <!-- QUOTE -->
-        <div class="relative min-h-[15rem] justify-center overflow-hidden rounded-lg lg:p-10 bg-transparent" id="quote">
+        <div class="relative h-36 lg:min-h-[15rem] justify-center overflow-hidden rounded-lg lg:p-10 bg-transparent" id="quote">
           <h1 class="text-3xl font-black lg:text-6xl w-auto lg:min-w-[400px]">Buy Less,</h1>
           <h1 class="text-3xl font-black lg:text-6xl w-auto lg:min-w-[400px]">Choose Well,</h1>
           <h1 class="text-3xl font-black lg:text-6xl w-auto lg:min-w-[400px]">Make it Last</h1>
-          <p class="text-xl font-thin text-end w-auto lg:min-w-[400px]">-Vivienne Westwood</p>   
+          <p class="text-xl/3 font-thin text-end w-auto">-Vivienne Westwood</p>   
         </div> 
  
         <!-- FOUNDATION DIV -->
-    
-        <div class="overflow-hidden rounded-lg bg-stonegray flex flex-col items-center justify-center">
+        <div class="relative overflow-hidden rounded-lg bg-stonegray flex flex-col items-center justify-center lg:p-5">
 
-            <h1 class="text-3xl lg:text-5xl lg:mb-2 font-bold text-center">Trending Foundations</h1> 
+            <h1 class="text-xl lg:text-5xl lg:mb-2 font-bold text-center">Trending Foundations</h1> 
   
-            <ul class="flex flex-col gap-4 border-2 lg:w-96 lg:text-xl lg:gap-3">
-              <li class="text-left"><a href="https://www.fashionrevolution.org/"> Fashion Revolution</a></li>
-              <li class="text-left"><a href="https://remake.world/"> Remake Our World</a></li>
-              <li class="text-left"><a href="https://fashiontakesaction.com/"> Fashion Takes Action</a></li>
-              <li class="text-left"><a href="https://cleanclothes.org/"> Clean Clothes Campaign</a></li>
-              <li class="text-left"><a href="https://slowfactory.foundation/"> Slow Factory Foundation</a></li>
-             </ul>     
+            <ul class="flex flex-col gap-2 lg:w-96 lg:text-xl lg:gap-3">
+              <li class="text-left hover:font-bold"><a href="https://www.fashionrevolution.org/"> Fashion Revolution</a></li>
+              <li class="text-left hover:font-bold"><a href="https://remake.world/"> Remake Our World</a></li>
+              <li class="text-left hover:font-bold"><a href="https://fashiontakesaction.com/"> Fashion Takes Action</a></li>
+              <li class="text-left hover:font-bold"><a href="https://cleanclothes.org/"> Clean Clothes Campaign</a></li>
+              <li class="text-left hover:font-bold"><a href="https://slowfactory.foundation/"> Slow Factory Foundation</a></li>
+            </ul> 
 
         </div> 
 
-       <!-- ROW SPAN -->
-      <div class="row-span-2">
+        <!-- ROW SPAN -->
+        <div class="relative row-span-2 lg:row-span-1">
 
         <!-- WELCOME DIV -->
-        <div class="overflow-hidden rounded-lg bg-stonegray text-center flex-col items-center justify-center gap-5 px-10 h-[250px]">
-          <h2 class="py-4 font-bold text-3xl">👋 Welcome to UpCycle</h2>
-          <div>
-            <p class="px-3">If you're passionate about making better choices in fashion and caring for our planet, you're in the right place. Dive in, explore, and discover how we can make a difference together. Every small change counts, and here at UpCycle, we're all about creating big impacts with those small changes. Happy browsing!</p>
-          </div>
+        <div class="overflow-hidden rounded-lg bg-stonegray text-center flex-col items-center justify-center gap-5 lg:px-10 lg:h-[500px]">
+          <h2 class="lg:py-4 font-bold text-xl lg:text-3xl">👋 Welcome to UpCycle</h2>
+          <div><p class="px-3">If you're passionate about making better choices in fashion and caring for our planet, you're in the right place. Dive in, explore, and discover how we can make a difference together. Every small change counts, and here at UpCycle, we're all about creating big impacts with those small changes. Happy browsing!</p></div>
         </div> 
 
         <!-- DOWN BUTTON -->
         <div class="overflow-hidden rounded-lg bg-stonegray text-center flex-col items-center justify-center gap-5 px-10 mt-4">
-          <h2 class="py-4 font-bold text-3xl"> ⬇️ Add Button</h2>
+          <a>
+            <span><svg viewBox="0 0 512 512" class="h-10 mx-auto">
+              <path fill="#dedede" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+            </svg></span>
+          </a>
         </div> 
 
-      </div>
+        </div>
 
         <!-- IMAGE DIV -->
-        <div class="overflow-hidden rounded-lg min-h-[360px]" id="img"> 
-          <img id="light_img" src="assets/sample4.jpg" class="h-[100%] w-[100%] object-cover"> 
-          <img id="dark_img" src="assets/sample5.jpg" class="h-[100%] w-[100%] object-cover" style="display: none;">
+        <div class="relative overflow-hidden lg:h-[565px] lg:pb-2" id="img"> 
+          <img id="light_img" src="assets/sample4.jpg" class="h-[100%] rounded-lg w-[100%] object-cover"> 
+          <img id="dark_img" src="assets/sample5.jpg" class="h-[100%] rounded-lg w-[100%] object-cover" style="display: none;">
         </div>         
 
-        </div>
+      </div>
 
     </section><hr>
     
@@ -80,7 +80,7 @@
       <div class="w-11/12 h-11/12 flex flex-col justify-evenly overflow-x-hidden items-center">
          
         <!-- TOP BRAND PICKS DIV -->
-        <div class="w-6/12 flex flex-col items-center justify-center">
+        <div class="w-6/12 flex flex-col items-left justify-center">
           <h1 class="py-4 text-3xl font-bold"> TOP BRAND PICKS</h1>
           <p>There are some brands out there that are doing a great job thinking about our planet. They're making clothes in a way that's better for the environment and for people. When you buy from these brands, you're helping make a positive change.</p>
         </div>
